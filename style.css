@@ -1,5 +1,52 @@
-body {
+body{
     padding: 0;
     margin: 0;
 }
 
+/* create 3 unites, the entier game is contient in the "game" the T.rex contient in "character and the obstacle in 'block" */
+
+#game{
+    width: 500px;
+    height: 150px;
+    border: 2px solid grey;
+    margin: auto;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: grey;
+    position: relative;
+    top: 100px;
+}
+
+/* create an animation class link to the character for javascript function*/
+
+.animate{
+    animation: jump 0.97s linear;
+}
+
+/* create character animation jump */
+
+@keyframes jump {
+    0% {top: 100px;}
+    30% {top: 60px;}
+    70% {top: 60px;} 
+    100% {top: 100px;}
+}
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: royalblue;
+    position: relative;
+    top: 80px;
+    left: 480px;
+    animation: block 4s infinite linear;
+}
+
+/* create a block animation */
+
+@keyframes block{
+    0% {left: 480px;}
+    100% {left: -5px;}
+
+}
